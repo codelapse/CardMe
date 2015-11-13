@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *stepperLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *selectedCardImageView;
 @property (assign, nonatomic) std::vector<std::vector<cv::Point> > contours;
+@property (weak, nonatomic) IBOutlet UIImageView *recognizedCardImageView;
 
 @end
 
@@ -28,13 +29,9 @@
     
     
     UIImage *image = [UIImage imageNamed:@"sample.png"];
-    cv::Mat destination = [self cvMatFromUIImage:image];
-    cv::cvtColor(destination, destination, cv::COLOR_BGR2GRAY);
-    cv::GaussianBlur(destination, destination, cv::Size(1,1), 1000);
+    cv::Mat destination = [self _preprocess:image];
     
-    cv::threshold(destination, destination, 120, 255, cv::THRESH_BINARY);
     std::vector<std::vector<cv::Point> > contours;
-    
     cv::findContours(destination, contours, cv::RETR_LIST, cv::CHAIN_APPROX_SIMPLE);
     
     std::sort(contours.begin(),
@@ -87,9 +84,9 @@
     
     std::vector<cv::Point2f> output;
     output.push_back(cv::Point2f(0.0f, 0.0f));
-    output.push_back(cv::Point2f(100.0f, 0.0f));
-    output.push_back(cv::Point2f(100.0f, 150.0f));
-    output.push_back(cv::Point2f(0.0f, 150.0f));
+    output.push_back(cv::Point2f(71.0f, 0.0f));
+    output.push_back(cv::Point2f(71.0f, 96.0f));
+    output.push_back(cv::Point2f(0.0f, 96.0f));
     
     cv::Mat trans_mat33 = cv::getPerspectiveTransform(ordered, output);
     cv::Mat warpImage;
@@ -97,10 +94,11 @@
     cv::warpPerspective(src_img, warpImage, trans_mat33, src_img.size(), cv::INTER_LINEAR);
 
     UIImage *warImage = [self UIImageFromCVMat:warpImage];
-    CGImageRef imageRef = CGImageCreateWithImageInRect([warImage CGImage], CGRectMake(0, 0, 100, 150));
+    CGImageRef imageRef = CGImageCreateWithImageInRect([warImage CGImage], CGRectMake(0, 0, 71, 96));
     self.selectedCardImageView.image = [UIImage imageWithCGImage:imageRef];
     CGImageRelease(imageRef);
     
+    [self _recognizeImage:self.selectedCardImageView.image];
     [self _drawContoursWitSelectedCard:index];
     
 }
@@ -174,6 +172,55 @@
     
     self.outputImageView.image = [self UIImageFromCVMat:contoursDestination];
     
+}
+
+- (void) _recognizeImage:(UIImage*)inputImage
+{
+    double bestMatchValue = MAXFLOAT;
+    NSString *bestMatchName = @"";
+    
+    cv::Mat preprocessInputImage = [self _preprocess:inputImage];
+    NSArray *deckImageNameArray = [self _deckImageNameArray];
+    for(NSString *imageName in deckImageNameArray)
+    {
+        cv::Mat preprocessCardImage = [self _preprocess:[UIImage imageNamed:imageName]];
+        
+        cv::Mat output;
+        cv::absdiff(preprocessInputImage, preprocessCardImage, output);
+        cv::threshold(output, output, 120, 255, cv::THRESH_BINARY);
+        cv::Scalar sum = cv::sum(output);
+        if(sum[0] < bestMatchValue)
+        {
+            bestMatchValue = sum[0];
+            bestMatchName = imageName;
+        }
+    }
+    
+    self.recognizedCardImageView.image = [UIImage imageNamed:bestMatchName];
+}
+
+- (cv::Mat) _preprocess:(UIImage*)inputImage
+{
+    cv::Mat destination = [self cvMatFromUIImage:inputImage];
+    cv::cvtColor(destination, destination, cv::COLOR_BGR2GRAY);
+    cv::GaussianBlur(destination, destination, cv::Size(1,1), 1000);
+    cv::threshold(destination, destination, 120, 255, cv::THRESH_BINARY);
+    
+    return destination;
+}
+
+- (NSArray*) _deckImageNameArray
+{
+    NSMutableArray *deckImageNameArray = [NSMutableArray new];
+    for(NSString *prefix in @[@"c", @"d", @"h", @"s"]) {
+        for(int i=1; i<=10; i++) {
+            [deckImageNameArray addObject:[NSString stringWithFormat:@"%@%d", prefix, i]];
+        }
+        for(NSString *sufix in @[@"j", @"k", @"q"]) {
+            [deckImageNameArray addObject:[NSString stringWithFormat:@"%@%@", prefix, sufix]];
+        }
+    }
+    return deckImageNameArray;
 }
 
 - (cv::Mat)cvMatFromUIImage:(UIImage *)image

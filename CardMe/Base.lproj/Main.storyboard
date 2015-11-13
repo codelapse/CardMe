@@ -52,10 +52,19 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X5W-y6-yvh">
+                                <rect key="frame" x="136" y="401" width="100" height="150"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Ax8-wt-JRV"/>
+                                    <constraint firstAttribute="height" constant="150" id="QHL-xR-zNa"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="X5W-y6-yvh" firstAttribute="leading" secondItem="edV-u4-wb0" secondAttribute="trailing" constant="26" id="5BI-3E-EH3"/>
                             <constraint firstItem="CpZ-4h-3Ve" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9BC-nV-1o9"/>
                             <constraint firstItem="T17-Mw-71U" firstAttribute="leading" secondItem="0tq-0k-Ysq" secondAttribute="trailing" constant="16" id="9gf-IC-Gio"/>
                             <constraint firstItem="TdK-AX-uYJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Du3-Oc-Xzf"/>
@@ -66,6 +75,7 @@
                             <constraint firstItem="CpZ-4h-3Ve" firstAttribute="trailing" secondItem="TdK-AX-uYJ" secondAttribute="trailing" id="YTX-0W-cv6"/>
                             <constraint firstItem="TdK-AX-uYJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="jvD-s8-U5S"/>
                             <constraint firstAttribute="trailing" secondItem="TdK-AX-uYJ" secondAttribute="trailing" constant="10" id="oUD-fu-jjh"/>
+                            <constraint firstItem="X5W-y6-yvh" firstAttribute="top" secondItem="edV-u4-wb0" secondAttribute="top" id="pUk-AA-xI1"/>
                             <constraint firstItem="edV-u4-wb0" firstAttribute="top" secondItem="0tq-0k-Ysq" secondAttribute="bottom" constant="16" id="sKi-Eh-4bO"/>
                             <constraint firstItem="edV-u4-wb0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="we2-bb-Fh6"/>
                             <constraint firstItem="TdK-AX-uYJ" firstAttribute="top" secondItem="CpZ-4h-3Ve" secondAttribute="bottom" constant="10" id="wmV-C9-THg"/>
@@ -74,6 +84,7 @@
                     <connections>
                         <outlet property="inputImageView" destination="CpZ-4h-3Ve" id="bf7-a3-8un"/>
                         <outlet property="outputImageView" destination="TdK-AX-uYJ" id="ECt-MN-FE4"/>
+                        <outlet property="recognizedCardImageView" destination="X5W-y6-yvh" id="6l6-bJ-kJ4"/>
                         <outlet property="selectedCardImageView" destination="edV-u4-wb0" id="2HC-qg-0Bp"/>
                         <outlet property="stepper" destination="0tq-0k-Ysq" id="ZNu-PY-5g1"/>
                         <outlet property="stepperLabel" destination="T17-Mw-71U" id="4ZS-DA-D2q"/>
