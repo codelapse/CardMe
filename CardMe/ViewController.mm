@@ -13,6 +13,10 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *inputImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *outputImageView;
+@property (weak, nonatomic) IBOutlet UIStepper *stepper;
+@property (weak, nonatomic) IBOutlet UILabel *stepperLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *selectedCardImageView;
+@property (assign, nonatomic) std::vector<std::vector<cv::Point> > contours;
 
 @end
 
@@ -29,55 +33,148 @@
     cv::GaussianBlur(destination, destination, cv::Size(1,1), 1000);
     
     cv::threshold(destination, destination, 120, 255, cv::THRESH_BINARY);
-    
     std::vector<std::vector<cv::Point> > contours;
-    const cv::Scalar color = cv::Scalar(255, 0, 0);
-    cv::findContours(destination, contours, cv::RETR_TREE, cv::CHAIN_APPROX_SIMPLE);
+    
+    cv::findContours(destination, contours, cv::RETR_LIST, cv::CHAIN_APPROX_SIMPLE);
     
     std::sort(contours.begin(),
               contours.end(),
               [](const std::vector<cv::Point>& lhs, const std::vector<cv::Point>& rhs) {
-                  return cv::contourArea(lhs, true) < cv::contourArea(rhs, true);
+                  double area1 = cv::contourArea(lhs, true);
+                  double area2 = cv::contourArea(rhs, true);
+                  return area1 < area2;
               });
     
     
-    cv::Mat contoursDestination = [self cvMatEmptyFromUIImage:image];
-    for(int i=0; i<contours.size() && i<55; i++)
-    {
-        cv::drawContours(contoursDestination, contours, i, color, 3);
-    }
+    self.contours = contours;
+    
     
     self.inputImageView.image = image;
+    self.stepper.minimumValue = 1;
+    self.stepper.maximumValue = 55;
+    [self _extractCardAtIndex:1];
+}
+
+
+- (IBAction)_stepperHandler:(id)sender
+{
+    [self _extractCardAtIndex:(int)self.stepper.value];
+}
+
+- (void) _extractCardAtIndex:(NSInteger)index
+{
+    self.stepper.value = index;
+    self.stepperLabel.text = [NSString stringWithFormat:@"%d", (int)index];
+    
+    UIImage *image = [UIImage imageNamed:@"sample.png"];
+    
+    
+    std::vector<cv::Point> contour = self.contours[index];
+    
+    std::vector<cv::Point> approx;
+    cv::approxPolyDP(cv::Mat(contour), approx, arcLength(cv::Mat(contour), NO)*0.02, NO);
+    
+    
+    cv::RotatedRect minRect = minAreaRect(cv::Mat(contour));
+    cv::Point2f rect_points[4];
+    minRect.points( rect_points );
+    std::vector<cv::Point2f> approx2;
+    for ( int j = 0; j < 4; j++ ) {
+        approx2.push_back(rect_points[j]);
+    }
+    
+    std::vector<cv::Point2f> ordered = [self _order:approx2];
+    
+    std::vector<cv::Point2f> output;
+    output.push_back(cv::Point2f(0.0f, 0.0f));
+    output.push_back(cv::Point2f(100.0f, 0.0f));
+    output.push_back(cv::Point2f(100.0f, 150.0f));
+    output.push_back(cv::Point2f(0.0f, 150.0f));
+    
+    cv::Mat trans_mat33 = cv::getPerspectiveTransform(ordered, output);
+    cv::Mat warpImage;
+    cv::Mat src_img = [self cvMatFromUIImage:image];
+    cv::warpPerspective(src_img, warpImage, trans_mat33, src_img.size(), cv::INTER_LINEAR);
+
+    UIImage *warImage = [self UIImageFromCVMat:warpImage];
+    CGImageRef imageRef = CGImageCreateWithImageInRect([warImage CGImage], CGRectMake(0, 0, 100, 150));
+    self.selectedCardImageView.image = [UIImage imageWithCGImage:imageRef];
+    CGImageRelease(imageRef);
+    
+    [self _drawContoursWitSelectedCard:index];
+    
+}
+
+- (std::vector<cv::Point2f>) _order:(std::vector<cv::Point2f>)input
+{
+    
+    double pt0s = input[0].x + input[0].y;
+    double pt1s = input[1].x + input[1].y;
+    double pt2s = input[2].x + input[2].y;
+    double pt3s = input[3].x + input[3].y;
+    
+    NSArray *sumArray = @[@(pt0s), @(pt1s), @(pt2s), @(pt3s)];
+    NSNumber *sumMax = [sumArray valueForKeyPath:@"@max.floatValue"];
+    NSNumber *sumMin = [sumArray valueForKeyPath:@"@min.floatValue"];
+    
+    cv::Point2f outputPt0, outputPt1, outputPt2, outputPt3;
+    
+    NSMutableArray *finalSumArray = [NSMutableArray new];
+    for(int i=0; i<sumArray.count; i++)
+    {
+        NSNumber *value = sumArray[i];
+        if(value.floatValue == sumMin.floatValue) outputPt0 = input[i];
+        else if(value.floatValue == sumMax.floatValue) outputPt2 = input[i];
+        else [finalSumArray addObject:value];
+    }
+    
+    NSNumber *finalSumMax = [finalSumArray valueForKeyPath:@"@max.floatValue"];
+    NSNumber *finalSumMin = [finalSumArray valueForKeyPath:@"@min.floatValue"];
+    for(int i=0; i<sumArray.count; i++)
+    {
+        NSNumber *value = sumArray[i];
+        if(value.floatValue == finalSumMax.floatValue) outputPt3 = input[i];
+        else if(value.floatValue == finalSumMin.floatValue) outputPt1 = input[i];
+    }
+    
+    std::vector<cv::Point2f> output;
+    output.push_back(outputPt0);
+    output.push_back(outputPt1);
+    output.push_back(outputPt2);
+    output.push_back(outputPt3);
+    
+    return output;
+}
+
+- (void) _drawContoursWitSelectedCard:(NSInteger)slectedCardIndex
+{
+    
+    UIImage *image = [UIImage imageNamed:@"sample.png"];
+    cv::Mat contoursDestination = [self cvMatEmptyFromUIImage:image];
+    
+    for(int i=0; i<self.contours.size() && i<55; i++)
+    {
+        std::vector<cv::Point> contour = self.contours[i];
+        
+        std::vector<cv::Point> approx;
+        cv::approxPolyDP(cv::Mat(contour), approx, arcLength(cv::Mat(contour), NO)*0.02, NO);
+        
+        
+        cv::RotatedRect minRect = minAreaRect(cv::Mat(contour));
+        cv::Point2f rect_points[4];
+        minRect.points( rect_points );
+        std::vector<cv::Point2f> approx2;
+        
+        cv::Scalar color = (slectedCardIndex == i)?(cv::Scalar(255,0,0)):(cv::Scalar(0,255,0));
+        
+        for ( int j = 0; j < 4; j++ ) {
+            cv::line( contoursDestination, rect_points[j], rect_points[(j+1)%4], color, 2, 8 );
+        }
+    }
+    
     self.outputImageView.image = [self UIImageFromCVMat:contoursDestination];
     
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
-    
-    
-    
-//    
-//    cv::OutputArray dst;
-//    GaussianBlur(mat->InputArray, dst, (1,1), );
-//    
-//    InputArray src,
-//    OutputArray dst, Size ksize,
-//    double sigmaX, double sigmaY=0,
-//    int borderType=BORDER_DEFAULT
-    
-//    im = cv2.imread(filename)
-//    gray = cv2.cvtColor(im,cv2.COLOR_BGR2GRAY)
-//    blur = cv2.GaussianBlur(gray,(1,1),1000)
-//    flag, thresh = cv2.threshold(blur, 120, 255, cv2.THRESH_BINARY)
-//    
-//    
-//    contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
-//    contours = sorted(contours, key=cv2.contourArea,reverse=True)[:numcards]
-}
-
-
 
 - (cv::Mat)cvMatFromUIImage:(UIImage *)image
 {
