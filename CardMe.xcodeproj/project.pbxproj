@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07119BB31BDD63F60019A041 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07119BB21BDD63F60019A041 /* main.m */; };
+		07119BB61BDD63F60019A041 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07119BB51BDD63F60019A041 /* AppDelegate.m */; };
+		07119BB91BDD63F60019A041 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07119BB81BDD63F60019A041 /* ViewController.mm */; };
+		07119BBC1BDD63F60019A041 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07119BBA1BDD63F60019A041 /* Main.storyboard */; };
+		07119BBE1BDD63F60019A041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07119BBD1BDD63F60019A041 /* Assets.xcassets */; };
+		07119BC11BDD63F60019A041 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07119BBF1BDD63F60019A041 /* LaunchScreen.storyboard */; };
+		07119BCC1BDD63F60019A041 /* CardMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07119BCB1BDD63F60019A041 /* CardMeTests.m */; };
+		07119BD71BDD63F60019A041 /* CardMeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07119BD61BDD63F60019A041 /* CardMeUITests.m */; };
+		07119BE51BDD64630019A041 /* sample.png in Resources */ = {isa = PBXBuildFile; fileRef = 07119BE41BDD64630019A041 /* sample.png */; settings = {ASSET_TAGS = (); }; };
+		07A8E0B51BDD67FF00780DC2 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A8E0B41BDD67FF00780DC2 /* libjpeg.a */; };
+		D739187AA45C13081A04251E /* libPods-CardMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FB792AE11F052C3EB9D39C /* libPods-CardMe.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07119BC81BDD63F60019A041 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07119BA61BDD63F60019A041 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07119BAD1BDD63F60019A041;
+			remoteInfo = CardMe;
+		};
+		07119BD31BDD63F60019A041 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07119BA61BDD63F60019A041 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07119BAD1BDD63F60019A041;
+			remoteInfo = CardMe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07119BAE1BDD63F60019A041 /* CardMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07119BB21BDD63F60019A041 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		07119BB41BDD63F60019A041 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		07119BB51BDD63F60019A041 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		07119BB71BDD63F60019A041 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		07119BB81BDD63F60019A041 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		07119BBB1BDD63F60019A041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		07119BBD1BDD63F60019A041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07119BC01BDD63F60019A041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		07119BC21BDD63F60019A041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07119BC71BDD63F60019A041 /* CardMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07119BCB1BDD63F60019A041 /* CardMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardMeTests.m; sourceTree = "<group>"; };
+		07119BCD1BDD63F60019A041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07119BD21BDD63F60019A041 /* CardMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07119BD61BDD63F60019A041 /* CardMeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardMeUITests.m; sourceTree = "<group>"; };
+		07119BD81BDD63F60019A041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07119BE41BDD64630019A041 /* sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample.png; sourceTree = SOURCE_ROOT; };
+		07A8E0B41BDD67FF00780DC2 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjpeg.a; sourceTree = "<group>"; };
+		30252449AE6D5D78CCBF15A7 /* Pods-CardMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardMe/Pods-CardMe.debug.xcconfig"; sourceTree = "<group>"; };
+		83FB792AE11F052C3EB9D39C /* libPods-CardMe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CardMe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		889230E268EAF39F183D0624 /* Pods-CardMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardMe/Pods-CardMe.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07119BAB1BDD63F60019A041 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A8E0B51BDD67FF00780DC2 /* libjpeg.a in Frameworks */,
+				D739187AA45C13081A04251E /* libPods-CardMe.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07119BC41BDD63F60019A041 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07119BCF1BDD63F60019A041 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07119BA51BDD63F60019A041 = {
+			isa = PBXGroup;
+			children = (
+				07119BB01BDD63F60019A041 /* CardMe */,
+				07119BCA1BDD63F60019A041 /* CardMeTests */,
+				07119BD51BDD63F60019A041 /* CardMeUITests */,
+				07119BAF1BDD63F60019A041 /* Products */,
+				22C39D6A711A871D6259C81F /* Pods */,
+				97069666AF95447E7DE6D850 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		07119BAF1BDD63F60019A041 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07119BAE1BDD63F60019A041 /* CardMe.app */,
+				07119BC71BDD63F60019A041 /* CardMeTests.xctest */,
+				07119BD21BDD63F60019A041 /* CardMeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07119BB01BDD63F60019A041 /* CardMe */ = {
+			isa = PBXGroup;
+			children = (
+				07119BE41BDD64630019A041 /* sample.png */,
+				07119BB41BDD63F60019A041 /* AppDelegate.h */,
+				07119BB51BDD63F60019A041 /* AppDelegate.m */,
+				07119BB71BDD63F60019A041 /* ViewController.h */,
+				07119BB81BDD63F60019A041 /* ViewController.mm */,
+				07119BBA1BDD63F60019A041 /* Main.storyboard */,
+				07119BBD1BDD63F60019A041 /* Assets.xcassets */,
+				07119BBF1BDD63F60019A041 /* LaunchScreen.storyboard */,
+				07119BC21BDD63F60019A041 /* Info.plist */,
+				07119BB11BDD63F60019A041 /* Supporting Files */,
+			);
+			path = CardMe;
+			sourceTree = "<group>";
+		};
+		07119BB11BDD63F60019A041 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07119BB21BDD63F60019A041 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07119BCA1BDD63F60019A041 /* CardMeTests */ = {
+			isa = PBXGroup;
+			children = (
+				07119BCB1BDD63F60019A041 /* CardMeTests.m */,
+				07119BCD1BDD63F60019A041 /* Info.plist */,
+			);
+			path = CardMeTests;
+			sourceTree = "<group>";
+		};
+		07119BD51BDD63F60019A041 /* CardMeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				07119BD61BDD63F60019A041 /* CardMeUITests.m */,
+				07119BD81BDD63F60019A041 /* Info.plist */,
+			);
+			path = CardMeUITests;
+			sourceTree = "<group>";
+		};
+		22C39D6A711A871D6259C81F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				30252449AE6D5D78CCBF15A7 /* Pods-CardMe.debug.xcconfig */,
+				889230E268EAF39F183D0624 /* Pods-CardMe.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		97069666AF95447E7DE6D850 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07A8E0B41BDD67FF00780DC2 /* libjpeg.a */,
+				83FB792AE11F052C3EB9D39C /* libPods-CardMe.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07119BAD1BDD63F60019A041 /* CardMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07119BDB1BDD63F60019A041 /* Build configuration list for PBXNativeTarget "CardMe" */;
+			buildPhases = (
+				8AEA22406923683A3CBA9565 /* Check Pods Manifest.lock */,
+				07119BAA1BDD63F60019A041 /* Sources */,
+				07119BAB1BDD63F60019A041 /* Frameworks */,
+				07119BAC1BDD63F60019A041 /* Resources */,
+				E137AE54B4B84A950A6BDCC0 /* Embed Pods Frameworks */,
+				A74215ECBFC7351F72DCA771 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CardMe;
+			productName = CardMe;
+			productReference = 07119BAE1BDD63F60019A041 /* CardMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07119BC61BDD63F60019A041 /* CardMeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07119BDE1BDD63F60019A041 /* Build configuration list for PBXNativeTarget "CardMeTests" */;
+			buildPhases = (
+				07119BC31BDD63F60019A041 /* Sources */,
+				07119BC41BDD63F60019A041 /* Frameworks */,
+				07119BC51BDD63F60019A041 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07119BC91BDD63F60019A041 /* PBXTargetDependency */,
+			);
+			name = CardMeTests;
+			productName = CardMeTests;
+			productReference = 07119BC71BDD63F60019A041 /* CardMeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		07119BD11BDD63F60019A041 /* CardMeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07119BE11BDD63F60019A041 /* Build configuration list for PBXNativeTarget "CardMeUITests" */;
+			buildPhases = (
+				07119BCE1BDD63F60019A041 /* Sources */,
+				07119BCF1BDD63F60019A041 /* Frameworks */,
+				07119BD01BDD63F60019A041 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07119BD41BDD63F60019A041 /* PBXTargetDependency */,
+			);
+			name = CardMeUITests;
+			productName = CardMeUITests;
+			productReference = 07119BD21BDD63F60019A041 /* CardMeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07119BA61BDD63F60019A041 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Eric;
+				TargetAttributes = {
+					07119BAD1BDD63F60019A041 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					07119BC61BDD63F60019A041 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 07119BAD1BDD63F60019A041;
+					};
+					07119BD11BDD63F60019A041 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 07119BAD1BDD63F60019A041;
+					};
+				};
+			};
+			buildConfigurationList = 07119BA91BDD63F60019A041 /* Build configuration list for PBXProject "CardMe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07119BA51BDD63F60019A041;
+			productRefGroup = 07119BAF1BDD63F60019A041 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07119BAD1BDD63F60019A041 /* CardMe */,
+				07119BC61BDD63F60019A041 /* CardMeTests */,
+				07119BD11BDD63F60019A041 /* CardMeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07119BAC1BDD63F60019A041 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07119BC11BDD63F60019A041 /* LaunchScreen.storyboard in Resources */,
+				07119BBE1BDD63F60019A041 /* Assets.xcassets in Resources */,
+				07119BBC1BDD63F60019A041 /* Main.storyboard in Resources */,
+				07119BE51BDD64630019A041 /* sample.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07119BC51BDD63F60019A041 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07119BD01BDD63F60019A041 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8AEA22406923683A3CBA9565 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A74215ECBFC7351F72DCA771 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CardMe/Pods-CardMe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E137AE54B4B84A950A6BDCC0 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CardMe/Pods-CardMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07119BAA1BDD63F60019A041 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07119BB91BDD63F60019A041 /* ViewController.mm in Sources */,
+				07119BB61BDD63F60019A041 /* AppDelegate.m in Sources */,
+				07119BB31BDD63F60019A041 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07119BC31BDD63F60019A041 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07119BCC1BDD63F60019A041 /* CardMeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07119BCE1BDD63F60019A041 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07119BD71BDD63F60019A041 /* CardMeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07119BC91BDD63F60019A041 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07119BAD1BDD63F60019A041 /* CardMe */;
+			targetProxy = 07119BC81BDD63F60019A041 /* PBXContainerItemProxy */;
+		};
+		07119BD41BDD63F60019A041 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07119BAD1BDD63F60019A041 /* CardMe */;
+			targetProxy = 07119BD31BDD63F60019A041 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		07119BBA1BDD63F60019A041 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07119BBB1BDD63F60019A041 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		07119BBF1BDD63F60019A041 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07119BC01BDD63F60019A041 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07119BD91BDD63F60019A041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		07119BDA1BDD63F60019A041 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07119BDC1BDD63F60019A041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30252449AE6D5D78CCBF15A7 /* Pods-CardMe.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CardMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CM.CardMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		07119BDD1BDD63F60019A041 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 889230E268EAF39F183D0624 /* Pods-CardMe.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CardMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CM.CardMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		07119BDF1BDD63F60019A041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CardMeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CM.CardMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CardMe.app/CardMe";
+			};
+			name = Debug;
+		};
+		07119BE01BDD63F60019A041 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CardMeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CM.CardMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CardMe.app/CardMe";
+			};
+			name = Release;
+		};
+		07119BE21BDD63F60019A041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CardMeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CM.CardMeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CardMe;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		07119BE31BDD63F60019A041 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CardMeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CM.CardMeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CardMe;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07119BA91BDD63F60019A041 /* Build configuration list for PBXProject "CardMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07119BD91BDD63F60019A041 /* Debug */,
+				07119BDA1BDD63F60019A041 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07119BDB1BDD63F60019A041 /* Build configuration list for PBXNativeTarget "CardMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07119BDC1BDD63F60019A041 /* Debug */,
+				07119BDD1BDD63F60019A041 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07119BDE1BDD63F60019A041 /* Build configuration list for PBXNativeTarget "CardMeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07119BDF1BDD63F60019A041 /* Debug */,
+				07119BE01BDD63F60019A041 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07119BE11BDD63F60019A041 /* Build configuration list for PBXNativeTarget "CardMeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07119BE21BDD63F60019A041 /* Debug */,
+				07119BE31BDD63F60019A041 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07119BA61BDD63F60019A041 /* Project object */;
+}
