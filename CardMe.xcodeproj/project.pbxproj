@@ -69,7 +69,9 @@
 		07EDFCB11BF688230038B657 /* sj.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EDFC7A1BF688230038B657 /* sj.png */; settings = {ASSET_TAGS = (); }; };
 		07EDFCB21BF688230038B657 /* sk.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EDFC7B1BF688230038B657 /* sk.png */; settings = {ASSET_TAGS = (); }; };
 		07EDFCB31BF688230038B657 /* sq.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EDFC7C1BF688230038B657 /* sq.png */; settings = {ASSET_TAGS = (); }; };
-		D739187AA45C13081A04251E /* libPods-CardMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FB792AE11F052C3EB9D39C /* libPods-CardMe.a */; };
+		192F33CDF69D0F5CE51F2862 /* libPods-CardMeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB2F03BC481204C4D9AB329 /* libPods-CardMeUITests.a */; };
+		4639068D06D96E3B7AD13CD0 /* libPods-CardMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 026F6E95FCB96AE285D5E60A /* libPods-CardMe.a */; };
+		BEC1FB3FD25D6D5E362C983F /* libPods-CardMeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F785AB0CBC0A156297CF89 /* libPods-CardMeTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		026F6E95FCB96AE285D5E60A /* libPods-CardMe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CardMe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07119BAE1BDD63F60019A041 /* CardMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07119BB21BDD63F60019A041 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		07119BB41BDD63F60019A041 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -160,9 +163,14 @@
 		07EDFC7A1BF688230038B657 /* sj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sj.png; sourceTree = "<group>"; };
 		07EDFC7B1BF688230038B657 /* sk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sk.png; sourceTree = "<group>"; };
 		07EDFC7C1BF688230038B657 /* sq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sq.png; sourceTree = "<group>"; };
-		30252449AE6D5D78CCBF15A7 /* Pods-CardMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardMe/Pods-CardMe.debug.xcconfig"; sourceTree = "<group>"; };
-		83FB792AE11F052C3EB9D39C /* libPods-CardMe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CardMe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		889230E268EAF39F183D0624 /* Pods-CardMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardMe/Pods-CardMe.release.xcconfig"; sourceTree = "<group>"; };
+		0C8DB46BF64017CA446B1AC1 /* Pods-CardMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardMe/Pods-CardMe.release.xcconfig"; sourceTree = "<group>"; };
+		23FE8411699291F82FD6CCF7 /* Pods-CardMeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardMeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardMeUITests/Pods-CardMeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		51E773DE509E39AFD98D1BA5 /* Pods-CardMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardMeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardMeTests/Pods-CardMeTests.release.xcconfig"; sourceTree = "<group>"; };
+		95A454AA4B3AC8F728BFA74D /* Pods-CardMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardMeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardMeTests/Pods-CardMeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B3A8C1003412F65A8C74CA01 /* Pods-CardMeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardMeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardMeUITests/Pods-CardMeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C1F785AB0CBC0A156297CF89 /* libPods-CardMeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CardMeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAB2F03BC481204C4D9AB329 /* libPods-CardMeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CardMeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE30B9A45BC18C34C7A08408 /* Pods-CardMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardMe/Pods-CardMe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A8E0B51BDD67FF00780DC2 /* libjpeg.a in Frameworks */,
-				D739187AA45C13081A04251E /* libPods-CardMe.a in Frameworks */,
+				4639068D06D96E3B7AD13CD0 /* libPods-CardMe.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEC1FB3FD25D6D5E362C983F /* libPods-CardMeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				192F33CDF69D0F5CE51F2862 /* libPods-CardMeUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,8 +209,8 @@
 				07119BCA1BDD63F60019A041 /* CardMeTests */,
 				07119BD51BDD63F60019A041 /* CardMeUITests */,
 				07119BAF1BDD63F60019A041 /* Products */,
-				22C39D6A711A871D6259C81F /* Pods */,
 				97069666AF95447E7DE6D850 /* Frameworks */,
+				778BB14E2138EB9683CE50EC /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -317,11 +327,15 @@
 			path = deck;
 			sourceTree = "<group>";
 		};
-		22C39D6A711A871D6259C81F /* Pods */ = {
+		778BB14E2138EB9683CE50EC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				30252449AE6D5D78CCBF15A7 /* Pods-CardMe.debug.xcconfig */,
-				889230E268EAF39F183D0624 /* Pods-CardMe.release.xcconfig */,
+				EE30B9A45BC18C34C7A08408 /* Pods-CardMe.debug.xcconfig */,
+				0C8DB46BF64017CA446B1AC1 /* Pods-CardMe.release.xcconfig */,
+				95A454AA4B3AC8F728BFA74D /* Pods-CardMeTests.debug.xcconfig */,
+				51E773DE509E39AFD98D1BA5 /* Pods-CardMeTests.release.xcconfig */,
+				B3A8C1003412F65A8C74CA01 /* Pods-CardMeUITests.debug.xcconfig */,
+				23FE8411699291F82FD6CCF7 /* Pods-CardMeUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -330,7 +344,9 @@
 			isa = PBXGroup;
 			children = (
 				07A8E0B41BDD67FF00780DC2 /* libjpeg.a */,
-				83FB792AE11F052C3EB9D39C /* libPods-CardMe.a */,
+				026F6E95FCB96AE285D5E60A /* libPods-CardMe.a */,
+				C1F785AB0CBC0A156297CF89 /* libPods-CardMeTests.a */,
+				CAB2F03BC481204C4D9AB329 /* libPods-CardMeUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -342,12 +358,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07119BDB1BDD63F60019A041 /* Build configuration list for PBXNativeTarget "CardMe" */;
 			buildPhases = (
-				8AEA22406923683A3CBA9565 /* Check Pods Manifest.lock */,
+				9340C9F33FEF53567446E17C /* [CP] Check Pods Manifest.lock */,
 				07119BAA1BDD63F60019A041 /* Sources */,
 				07119BAB1BDD63F60019A041 /* Frameworks */,
 				07119BAC1BDD63F60019A041 /* Resources */,
-				E137AE54B4B84A950A6BDCC0 /* Embed Pods Frameworks */,
-				A74215ECBFC7351F72DCA771 /* Copy Pods Resources */,
+				096FE06546B8B1879D7ED7B6 /* [CP] Embed Pods Frameworks */,
+				98768F9E4566EE90CBF35520 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -362,9 +378,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07119BDE1BDD63F60019A041 /* Build configuration list for PBXNativeTarget "CardMeTests" */;
 			buildPhases = (
+				9AB866F0966A8E5B474D7395 /* [CP] Check Pods Manifest.lock */,
 				07119BC31BDD63F60019A041 /* Sources */,
 				07119BC41BDD63F60019A041 /* Frameworks */,
 				07119BC51BDD63F60019A041 /* Resources */,
+				5D1052008BAB527DFB7B0C1E /* [CP] Embed Pods Frameworks */,
+				DF907CFD48A93982390D4C33 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -380,9 +399,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07119BE11BDD63F60019A041 /* Build configuration list for PBXNativeTarget "CardMeUITests" */;
 			buildPhases = (
+				3B8C20D2EE698CE01762F069 /* [CP] Check Pods Manifest.lock */,
 				07119BCE1BDD63F60019A041 /* Sources */,
 				07119BCF1BDD63F60019A041 /* Frameworks */,
 				07119BD01BDD63F60019A041 /* Resources */,
+				CF5395C02F3CD9880607B06E /* [CP] Embed Pods Frameworks */,
+				F5502D700E5B72086CE858B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -517,29 +539,74 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8AEA22406923683A3CBA9565 /* Check Pods Manifest.lock */ = {
+		096FE06546B8B1879D7ED7B6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CardMe/Pods-CardMe-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A74215ECBFC7351F72DCA771 /* Copy Pods Resources */ = {
+		3B8C20D2EE698CE01762F069 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5D1052008BAB527DFB7B0C1E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CardMeTests/Pods-CardMeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9340C9F33FEF53567446E17C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		98768F9E4566EE90CBF35520 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -547,19 +614,64 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CardMe/Pods-CardMe-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E137AE54B4B84A950A6BDCC0 /* Embed Pods Frameworks */ = {
+		9AB866F0966A8E5B474D7395 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CardMe/Pods-CardMe-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CF5395C02F3CD9880607B06E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CardMeUITests/Pods-CardMeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF907CFD48A93982390D4C33 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CardMeTests/Pods-CardMeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5502D700E5B72086CE858B7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CardMeUITests/Pods-CardMeUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -710,7 +822,7 @@
 		};
 		07119BDC1BDD63F60019A041 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30252449AE6D5D78CCBF15A7 /* Pods-CardMe.debug.xcconfig */;
+			baseConfigurationReference = EE30B9A45BC18C34C7A08408 /* Pods-CardMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CardMe/Info.plist;
@@ -726,7 +838,7 @@
 		};
 		07119BDD1BDD63F60019A041 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 889230E268EAF39F183D0624 /* Pods-CardMe.release.xcconfig */;
+			baseConfigurationReference = 0C8DB46BF64017CA446B1AC1 /* Pods-CardMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CardMe/Info.plist;
@@ -742,6 +854,7 @@
 		};
 		07119BDF1BDD63F60019A041 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95A454AA4B3AC8F728BFA74D /* Pods-CardMeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = CardMeTests/Info.plist;
@@ -754,6 +867,7 @@
 		};
 		07119BE01BDD63F60019A041 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51E773DE509E39AFD98D1BA5 /* Pods-CardMeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = CardMeTests/Info.plist;
@@ -766,6 +880,7 @@
 		};
 		07119BE21BDD63F60019A041 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3A8C1003412F65A8C74CA01 /* Pods-CardMeUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = CardMeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -778,6 +893,7 @@
 		};
 		07119BE31BDD63F60019A041 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23FE8411699291F82FD6CCF7 /* Pods-CardMeUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = CardMeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
