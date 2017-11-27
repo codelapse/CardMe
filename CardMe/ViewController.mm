@@ -179,24 +179,43 @@
     double bestMatchValue = MAXFLOAT;
     NSString *bestMatchName = @"";
     
-    cv::Mat preprocessInputImage = [self _preprocess:inputImage];
+    cv::Mat preprocessInputImage = [self cvMatFromUIImage:inputImage];
+    
     NSArray *deckImageNameArray = [self _deckImageNameArray];
     for(NSString *imageName in deckImageNameArray)
     {
-        cv::Mat preprocessCardImage = [self _preprocess:[UIImage imageNamed:imageName]];
-        
-        cv::Mat output;
-        cv::absdiff(preprocessInputImage, preprocessCardImage, output);
-        cv::threshold(output, output, 120, 255, cv::THRESH_BINARY);
-        cv::Scalar sum = cv::sum(output);
-        if(sum[0] < bestMatchValue)
+        cv::Mat preprocessCardImage = [self cvMatFromUIImage:[UIImage imageNamed:imageName]];
+
+        double pnsr = [self getPSNRFromM1:preprocessInputImage andM2:preprocessCardImage];
+        if(pnsr < bestMatchValue)
         {
-            bestMatchValue = sum[0];
+            bestMatchValue = pnsr;
             bestMatchName = imageName;
         }
     }
     
     self.recognizedCardImageView.image = [UIImage imageNamed:bestMatchName];
+}
+
+// from https://docs.opencv.org/2.4/doc/tutorials/highgui/video-input-psnr-ssim/video-input-psnr-ssim.html#videoinputpsnrmssim
+- (double) getPSNRFromM1:(cv::Mat)I1 andM2:(cv::Mat)I2 {
+    cv::Mat s1;
+    absdiff(I1, I2, s1);       // |I1 - I2|
+    s1.convertTo(s1, CV_32F);  // cannot make a square on 8 bits
+    s1 = s1.mul(s1);           // |I1 - I2|^2
+    
+    cv::Scalar s = sum(s1);        // sum elements per channel
+    
+    double sse = s.val[0] + s.val[1] + s.val[2]; // sum channels
+    
+    if( sse <= 1e-10) // for small values return zero
+        return 0;
+    else
+    {
+        double mse  = sse / (double)(I1.channels() * I1.total());
+        double psnr = 10.0 * log10((255 * 255) / mse);
+        return psnr;
+    }
 }
 
 - (cv::Mat) _preprocess:(UIImage*)inputImage
