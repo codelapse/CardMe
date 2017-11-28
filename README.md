@@ -63,7 +63,7 @@ Le score le plus bas correspond à l'image la plus ressemblante.
 ## Installation
 ```
 # clone repo
-git clone git@github.com:ericdesa/cardme.git
+git clone git@github.com:ericdesa/cardme-ios.git
 
 # install pico2wave pour la synthèse vocale
 pod install
